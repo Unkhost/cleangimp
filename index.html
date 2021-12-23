@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Cómo limpiar y rotular manga (alias clean y typesetting) con Gimp</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+    body { color: rgb(145, 106, 126); background: silver; font-size: 110%; margin-left: 2%; margin-right: 2%}
+    h1 { color: teal; font-family: serif; font-size: 170%; }
+    h2 { color: teal; font-family: serif; font-size: 140%; }
+    h3 { color: teal; font-family: serif; font-size: 125%; }
+    a { color: teal; }
+  </style>
+</head>
+<body>
+
+<h1 align="center">Cómo limpiar y rotular manga (<em>clean</em> y <em>typesetting</em>) con Gimp</h1>
+
+<h2>1. Limpieza (clean)</h1>
+
+<h3> Primer ejemplo</h3>
+
+<p>
+La limpieza consiste en eliminar de las imágenes los textos que se van a traducir. Empezaremos limpiando esta viñeta:
+</p>
+
+<p align="center">
+<img src="limpieza1.jpg" width="465" height="323">
+</p>
+
+<p>
+Al abrir la imagen con Gimp tendremos una pantalla similar a ésta (en este caso, en Linux y xmonad):
+</p>
+
+<p align="center">
+<img src="limpieza2.jpg" width="1093" height="614">
+</p>
+
+<p>
+Ahora usamos la herramienta de selección rectangular (arriba a la izquierda) y rodeamos el texto del primer bocadillo.
+</p>
+
+<p align="center">
+<img src="limpieza3.jpg" width="1093" height="614">
+</p>
+
+<p>
+Ahora podríamos simplemente pintar el recuadro de blanco con el pincel o la herramienta de relleno, pero esto no siempre queda bien. Cuando la imagen no está bien escaneada, el fondo de los bocadillos no es de un blanco puro sino de un gris muy claro o un blanco con motitas grises. En ese caso, al pintar de blanco se notaría un recuadro blanco en medio del bocadillo y quedaría bastante feo. Algo que siempre da un buen resultado es la herramienta <em>Resynthesize</em>. Se accede a ella en el menú superior, Filtros/Mapa/Resynthesize.
+</p>
+
+<p align="center">
+<img src="limpieza4.jpg" width="1093" height="614">
+</p>
+
+<p>
+Esta herramienta borra el texto que hay dentro del recuadro seleccionado y deja un fondo similar a lo que hay alrededor de la selección. A veces <em>mira demasiado lejos</em> a su alrededor y nos puede salir algo como esto:
+</p>
+
+<p align="center">
+<img src="limpieza5.jpg" width="1093" height="614">
+</p>
+
+<p>
+En ese caso, podemos ajustar <em>cómo de lejos mira</em> en la pestaña <em>Tweaks</em>, barra <em>Neighbourhood size</em>, a una distancia más pequeña:
+</p>
+
+<p align="center">
+<img src="limpieza6.jpg" width="1093" height="614">
+</p>
+
+<p>
+O simplemente ajustar el rectángulo para seleccionar sólo la parte que no ha quedado bien y volver a usar la herramienta hasta que desaparezca.
+</p>
+
+<p align="center">
+<img src="limpieza7.jpg" width="1093" height="614">
+</p>
+
+<p>
+Ahora pasamos al siguiente bocadillo. Una vez más usamos la herramienta de selección rectangular.
+</p>
+
+<p align="center">
+<img src="limpieza8.jpg" width="1093" height="614">
+</p>
+
+<p>
+Sin embargo, el bocadillo tiene una forma extraña y no hay manera de encajar el recuadro sin que roce los bordes. Lo solucionamos deseleccionando el rectángulo (Ctrl+A) y usando la herramienta de selección libre.
+</p>
+
+<p align="center">
+<img src="limpieza9.jpg" width="1093" height="614">
+</p>
+
+<p>
+En general, usar la selección rectangular es más rápido, pero cuando el bocadillo no tiene una forma ovalada o el texto está demasiado cerca del borde, no queda más remedio que usar la selección libre, que es algo más lenta. Y luego se limpia igual, usando <em>Resynthesize</em>. Éste sería el resultado:
+</p>
+
+<p align="center">
+<img src="limpieza10.jpg" width="1093" height="614">
+</p>
+
+<h3>Segundo ejemplo</h3>
+
+<p>
+Por último, veamos un ejemplo un poco más complicado, un texto fuera de bocadillo con sombras debajo:
+</p>
+
+<p align="center">
+<img src="limpieza11.jpg" width="1093" height="614">
+</p>
+
+<p>
+Aquí tenemos un texto escrito sobre un papel que sostiene un personaje. En medio tiene un doblez, indicado por una sombra debajo de la letra 友. Empezamos por lo más fácil: borramos las letras fuera de la sombra con la herramienta de selección libre y <em>Resynthesize</em>.
+</p>
+
+<p align="center">
+<img src="limpieza12.jpg" width="1093" height="614">
+</p>
+
+<p>
+Ahora que tenemos un entorno limpio, podemos usar <em>Resynthesize</em> en la letra problemática sin que nos salgan trozos de las otras letras. La rodeamos con la selección libre, lo más cerca posible, ya que así la herramienta tiene más información para hacer una buena reconstrucción.
+</p>
+
+<p align="center">
+<img src="limpieza13.jpg" width="1093" height="614">
+</p>
+
+<p>
+No ha quedado del todo como queríamos pero casi. Nos queda un pequeño trabajo de retoque.
+</p>
+
+<p align="center">
+<img src="limpieza14.jpg" width="1093" height="614">
+</p>
+
+<p>
+Podemos arreglarlo con la herramienta de clonado o la de saneado, según el caso. Aquí usaremos saneado. De paso, también deseleccionamos (Ctrl+A).
+</p>
+
+<p align="center">
+<img src="limpieza15.jpg" width="1093" height="614">
+</p>
+
+<p>
+Los círculos indican el pincel de la herramienta de saneado. Éste es el resultado final, con toda la viñeta limpia:
+</p>
+
+<p align="center">
+<img src="limpieza16.jpg" width="1093" height="614">
+</p>
+
+
+
+<h2>2. Rotulado (typesetting)</h1>
+
+<p>
+Una vez hemos quitado el texto original de la imagen, toca colocar su traducción. En eso consiste el rotulado. Veremos tres ejemplos, de más sencillo a más complicado.
+</p>
+
+<h3>Primer ejemplo</h3>
+
+<p align="center">
+<img src="rotulado1.jpg" width="465" height="323">
+</p>
+
+<p>
+Seleccionamos la herramienta de texto y escribimos la traducción o la copiamos y pegamos de algún archivo de texto.
+</p>
+
+<p align="center">
+<img src="rotulado2.jpg" width="1093" height="614">
+</p>
+
+<p>
+El siguiente paso es ajustar el tamaño de la letra y mover el texto más o menos a la zona del bocadillo.
+</p>
+
+<p align="center">
+<img src="rotulado3.jpg" width="1093" height="614">
+</p>
+
+<p>
+Para ajustar el texto al bocadillo tenemos varias herramientas. Una combinación de ellas nos dará el resultado que queremos:
+<ul>
+<li>Introducir saltos de línea en el texto.</li>
+<li>Introducir espacios en blanco o guiones en el texto.</li>
+<li>Cambiar el tamaño de la letra.</li>
+<li>Cambiar la justificación del texto a centrado (normalmente sólo usaremos texto no centrado fuera de los bocadillos).</li>
+<li>Cambiar el espaciado entre renglones.</li>
+<li>Cambiar el espaciado entre letras.</li>
+</ul>
+</p>
+
+<p align="center">
+<img src="rotulado4.jpg" width="1093" height="614">
+</p>
+
+<p>
+Hay que procurar que el texto quede centrado en el bocadillo, tanto horizontal como verticalmente, no quede muy pegado al borde ni tampoco muy separado, y los renglones tengan todos más o menos el mismo tamaño. Con un poco de ensayo y error obtenemos:
+</p>
+
+<p align="center">
+<img src="rotulado5.jpg" width="1093" height="614">
+</p>
+
+<p>
+El otro bocadillo se hace igual. Pasamos ahora a la onomatopeya. Cambiamos el tipo de letra y el tamaño, y escribimos más o menos cerca de donde debe ir:
+</p>
+
+<p align="center">
+<img src="rotulado6.jpg" width="1093" height="614">
+</p>
+
+<p>
+A continuación añadiremos un borde blanco a las letras. Para ello, cerramos la herramienta de texto, vamos al menú <em>Capa</em> y escogemos <em>Texto a selección</em>. Luego, en el mismo menú, escogemos <em>Capa a tamaño de imagen</em> y <em>Duplicar capa</em>. Si abrimos el diálogo de capas (Ctrl+L) veremos que tenemos tres capas. Dos corresponden a nuestro texto y una a la imagen de fondo.
+</p>
+
+<p align="center">
+<img src="rotulado7.jpg" width="1093" height="614">
+</p>
+
+<p>
+Pulsando la tecla AvPág bajamos una capa y nos colocamos en la intermedia (de paso, cerramos el diálogo de capas, que no nos hace falta). Ahora, en el menú <em>Seleccionar</em>, escogemos la herramienta <em>Agrandar</em> para ampliar la selección. En este caso la ampliaremos 2 píxeles.
+</p>
+
+<p align="center">
+<img src="rotulado8.jpg" width="1093" height="614">
+</p>
+
+<p>
+Y en el mismo menú <em>Seleccionar</em> escogemos <em>Difuminar</em>, en este caso 4 píxeles. Luego usamos la herramienta de relleno para pintar la selección de blanco.
+</p>
+
+<p align="center">
+<img src="rotulado9.jpg" width="1093" height="614">
+</p>
+
+<p>
+Seguidamente, deseleccionamos (Ctrl+A), nos movemos a la capa superior (RePág), unimos las dos capas superiores (Capa/Combinar hacia abajo) y rotamos la capa.
+</p>
+
+<p align="center">
+<img src="rotulado10.jpg" width="1093" height="614">
+</p>
+
+<p>
+Por último, movemos la capa para trasladar el texto a su lugar y unimos todas las capas (Imagen/Aplanar la imagen).
+</p>
+
+<p align="center">
+<img src="rotulado11.jpg" width="1093" height="614">
+</p>
+
+<h3>Segundo ejemplo</h3>
+
+<p>Ahora escribiremos el texto en el papel que habíamos limpiado.</p>
+
+<p align="center">
+<img src="rotulado12.jpg" width="390" height="455">
+</p>
+
+<p>
+Dado que el papel está doblado, necesitaremos doblar el texto. Además, deberemos recortarlo, ya que el bocadillo lo tapa parcialmente. Para poder recortar fácilmente usaremos una capa nueva transparente, que crearemos con May+Ctrl+N.
+</p>
+
+<p align="center">
+<img src="rotulado13.jpg" width="1093" height="614">
+</p>
+
+<p>
+Usaremos una ruta para escribir el texto doblado. Primero dibujamos una ruta siguiendo el borde del papel:
+</p>
+
+<p align="center">
+<img src="rotulado14.jpg" width="1093" height="614">
+</p>
+
+<p>
+Y luego la movemos hacia donde debería estar el texto:
+</p>
+
+<p align="center">
+<img src="rotulado15.jpg" width="1093" height="614">
+</p>
+
+<p>
+Abrimos el diálogo de capas y le añadimos una solapa de rutas si no la tiene ya, con la flecha de la esquina superior derecha.
+</p>
+
+<p align="center">
+<img src="rotulado16.jpg" width="1093" height="614">
+</p>
+
+<p>
+Elegimos la ruta que habíamos dibujado y la hacemos visible con el icono del ojo.
+</p>
+
+<p align="center">
+<img src="rotulado17.jpg" width="1093" height="614">
+</p>
+
+<p>
+Escribimos el texto, alineado a la izquierda, en cualquier lugar de la imagen.
+</p>
+
+<p align="center">
+<img src="rotulado18.jpg" width="1093" height="614">
+</p>
+
+<p>
+Y pulsamos el botón de <em>Texto siguiendo una ruta</em>.
+</p>
+
+<p align="center">
+<img src="rotulado19.jpg" width="1093" height="614">
+</p>
+
+<p>
+Así hemos obtenido una ruta con la misma forma que el texto, como podemos comprobar en el diálogo de rutas.
+</p>
+
+<p align="center">
+<img src="rotulado20.jpg" width="1093" height="614">
+</p>
+
+<p>
+Ahora borramos la ruta antigua, que ya no necesitamos, y la capa de texto.
+</p>
+
+<p align="center">
+<img src="rotulado21.jpg" width="1093" height="614">
+</p>
+
+<p align="center">
+<img src="rotulado22.jpg" width="1093" height="614">
+</p>
+
+<p>
+A continuación, en la solapa de rutas, pulsamos con el botón derecho del ratón sobre nuestra ruta, elegimos <em>Ruta a selección</em> y luego borramos la ruta.
+</p>
+
+<p align="center">
+<img src="rotulado23.jpg" width="1093" height="614">
+</p>
+
+<p>
+Tenemos así una selección con la forma de nuestro texto, que pintamos de negro con la herramienta de relleno.
+</p>
+
+<p align="center">
+<img src="rotulado24.jpg" width="1093" height="614">
+</p>
+
+<p>
+Deseleccionamos (Ctrl+A) y ahora toca borrar el texto que sobresale por los lados. Se puede hacer de varias maneras. En un caso tan sencillo como éste simplemente usaremos la herramienta <em>borrador</em>. Y por último aplanamos la imagen. Éste es el resultado:
+</p>
+
+<p align="center">
+<img src="rotulado25.jpg" width="1093" height="614">
+</p>
+
+<h3>Tercer ejemplo</h3>
+
+<p>
+Ahora rotularemos esta imagen:
+</p>
+
+<p align="center">
+<img src="rotulado26.jpg" width="777" height="873">
+</p>
+
+<p>
+El único texto que requiere una técnica novedosa es el texto hueco amarillo del medio. El resto se pueden obtener con lo que ya hemos visto en los ejemplos anteriores de escribir un texto siguiendo una ruta y añadir un borde a un texto.
+</p>
+
+<p>
+Empezamos escribiendo el texto cerca del original, con un tamaño de letra adecuado.
+</p>
+
+<p align="center">
+<img src="rotulado27.jpg" width="1093" height="614">
+</p>
+
+<p>
+Luego pulsamos el botón <em>Crear una ruta a partir del texto</em>.
+</p>
+
+<p align="center">
+<img src="rotulado28.jpg" width="1093" height="614">
+</p>
+
+<p>
+Borramos la capa de texto, que ya no la necesitamos, y tenemos una ruta limpia con la que trabajar.
+</p>
+
+<p align="center">
+<img src="rotulado29.jpg" width="1093" height="614">
+</p>
+
+<p>
+Ahora, con la herramienta de rotación, giramos la ruta hasta que esté paralela al texto japonés.
+</p>
+
+<p align="center">
+<img src="rotulado30.jpg" width="1093" height="614">
+</p>
+
+<p>
+Y con la herramienta <em>Mover</em> la desplazamos hacia arriba (<strong>no</strong> la herramienta de rutas, que nos movería cada letra por separado).
+</p>
+
+<p align="center">
+<img src="rotulado31.jpg" width="1093" height="614">
+</p>
+
+<p>
+Luego, en la herramienta <em>Pincel</em>, escogemos un tamaño de pincel y un color adecuados para pintar nuestras letras.
+</p>
+
+<p align="center">
+<img src="rotulado32.jpg" width="1093" height="614">
+</p>
+
+<p>
+Finalmente, seleccionamos nuestra ruta en la solapa de rutas, volvemos a la herramienta de rutas, pulsamos el botón <em>Trazar ruta</em> y escogemos <em>Trazar utilizando una herramienta de pintura</em> y el pincel.
+</p>
+
+<p align="center">
+<img src="rotulado33.jpg" width="1093" height="614">
+</p>
+
+<p>
+Al eliminar la ruta obtenemos el resultado final:
+</p>
+
+<p align="center">
+<img src="rotulado34.jpg" width="1093" height="614">
+</p>
+
+</body>
+</html>
